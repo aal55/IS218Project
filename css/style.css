@@ -1,0 +1,45 @@
+body {
+    padding-top: 65px;
+    overflow-y:hidden;
+}
+
+.img-padding {
+    padding-right: 30px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-90%, -70%);
+    font-size: 36px;
+    text-align: center;
+}
+
+.laptop-pic {
+    -webkit-filter: brightness(50%);
+    width: 788px;
+    height: 526px;
+}
+
+.subheading {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.sign-up {
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    width: 450px;
+    height: auto;
+    text-align: center;
+}
+
+.sign-up-form {
+    text-align: left;
+}
+
+.sign-up-button {
+    text-align: center;
+}
