@@ -9,19 +9,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <script src="js/formValidation.js"></script>
     <title>Homepage</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
     <div class="container">
         <h1 class="text-light font-weight-bold">HWTrack</h1>
-        <form class="form-inline">
+        <form class="form-inline" id="login-form">
             <label class="mr-sm-2 text-light">Username </label>
-            <input type="email" class="form-control  mr-sm-2" id="email">
+            <input type="email" class="form-control mr-sm-2" id="email" required>
             <label for="pwd" class="mr-sm-2 text-light">Password </label>
-            <input type="password" class="form-control mr-sm-2" id="pwd">
-            <button type="submit" class="btn btn-secondary">Log In</button> <!-- Make interactive -->
+            <input type="password" class="form-control mr-sm-2" id="pwd" required>
+            <button type="submit" class="btn btn-secondary" onclick="loginValidation()">Log In</button> <!-- Make interactive -->
         </form>
     </div>
 </nav>
@@ -37,7 +38,7 @@
         </div>
         <div class="sign-up col form-group">
             <h2 class="text-primary font-weight-bold">Sign Up Today</h2>
-            <form class="sign-up-form">
+            <form class="sign-up-form" id="signup-form">
                 <div class="form-group">
                     <label class="mr-sm-2 text-secondary">Username </label>
                     <input type="email" class="form-control  mr-sm-2" id="newemail">
@@ -69,7 +70,7 @@
                     <input type="text" class="form-control mr-sm-2" id="major">
                 </div>
                 <div class="sign-up-button">
-                    <button type="submit" class="btn btn-primary">Sign Up</button> <!-- Make interactive -->
+                    <button type="submit" class="btn btn-primary" onclick="signUpValidation()">Sign Up</button> <!-- Make interactive -->
                 </div>
             </form>
         </div>
