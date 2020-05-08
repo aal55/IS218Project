@@ -30,34 +30,33 @@ session_start();
     <div class="container">
       <h1 class="text-light font-weight-bold">HWTrack</h1>
       <form class="form-inline">
-        <label class="mr-sm-2 text-light">Username </label>
-        <input type="email" class="form-control  mr-sm-2" id="email">
-        <label for="pwd" class="mr-sm-2 text-light">Password </label>
-        <input type="password" class="form-control mr-sm-2" id="pwd">
-        <button type="submit" class="btn btn-secondary">Log In</button> <!-- Make interactive -->
+        <button type="reset" class="button">
+			<a class="nav-link" href="Homepage.php">Sign Out</a></button>
       </form>
     </div>
   </nav>
   <div class="container-fluid">
     <div id="article_body">
       <h2>Edit Homework Assignment</h2>
-      <form action="/action_page.php" class="form-group">
-        Due Date:
-        <input type="text" id="date" name="date" required><br><br>
-      </form>
-      <form action="/action_page.php" class="form-group">
-        Title:
-        <input type="text" id="title" name="title" required><br><br>
-      </form>
-      <form action="/action_page.php" class="form-group">
-        Description &#40Max 144 Characters&#41:
-        <input type="text" id="description" name="description" required><br><br>
-      </form>
-      <form action="/action_page.php" class="form-group">
-        <button type="submit" class="button">
-          <a class="nav-link" href="editHw.html">Save Changes</a></button>
-        <button type="reset" class="button">
-          <a class="nav-link" href="editHw.html">Discard Changes</a></button>
+	  <form action="/action_page.php" id="edit">
+		<div class="form-group">
+			Due Date:
+			<input type="text" id="date" name="date" required><br><br>
+		</div>
+		<div class="form-group">
+			Title:
+			<input type="text" id="title" name="title" required><br><br>
+		</div>
+		<div class="form-group">
+			Description &#40Max 144 Characters&#41:
+			<input type="text" id="description" name="description" required><br><br>
+		</div>
+		<div class="form-group">
+			<input type="submit" class="button">
+			<a class="nav-link" href="editHw.php">Save Changes</a></input>
+			<input type="reset" class="button">
+			<a class="nav-link" href="editHw.php">Discard Changes</a></input>
+		</div>
       </form>
     </div>
   </div>

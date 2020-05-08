@@ -57,12 +57,12 @@ function hwValidation() {
         pass = false;
     }
 	if(pass) {
-		();
+		submitEdits();
     }
     else {
         alert(message);
     }
 }
-function () {
-    document.getElementById("").submit();
+function submitEdits() {
+    document.getElementById("edit").submit();
 }
