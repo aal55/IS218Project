@@ -47,10 +47,10 @@ session_start();
 			<input type="text" id="description" name="description" value="<?php echo $message; ?>" required><br><br>
 		</div>
 		<div class="form-group">
-			<input type="submit" class="button">
-			<a class="nav-link" href="Homepage.php">Save Changes</a></input>
-			<input type="button" class="button">
-			<a class="nav-link" href="Homepage.php">Discard Changes</a></input>
+			<button type="submit" class="button">
+			<a class="nav-link" href="Homepage.php">Save Changes</a></button>
+			<button type="button" class="button">
+			<a class="nav-link" href="Homepage.php">Discard Changes</a></button>
 		</div>
       </form>
     </div>
