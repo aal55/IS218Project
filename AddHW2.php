@@ -1,26 +1,28 @@
 <?php
 session_start();
 
-$dsn = "mysql:host=localhost;dbname=";
-$username = "";
+$dsn = "localhost";
+$username = "root";
 $password = "";
+$dbName = "pdopractice";
 
-if(isset($_POST['submit']){
- $dsn = new PDO($dsn, $username, $password);
- $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+try {
+    $conn = new PDO("mysql:host=$dsn;dbname=$dbName", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
- $query = $conn->prepare("ALTER TABLE todos ADD <title> varchar");
- $query = 'INSERT INTO todos (duedate, title, message) VALUES (:date,
- :title, :description)';
+    $query = 'INSERT INTO todos (duedate, title, message) VALUES (:duedate, :title, :description)';
 
- 	$statement = $conn->prepare($query);
- 	$statement->execute($duedate, $title, $message);
- 	$statement->closeCursor();
- 	print("Homework Assignment is Added");
- }
+    $statement = $conn->prepare($query);
+    $statement->bindValue(":duedate", $duedate);
+    $statement->bindValue(":title", $title);
+    $statement->bindValue(":description", $description);
+    $statement->execute();
+    $statement->closeCursor();
+    Header("Location: Homepage.php");
 
+}
 catch(PDOException $e) {
-	echo "Connection failed: " . $e->getMessage()
+	echo "Connection failed: " . $e->getMessage();
 }
 
 ?>

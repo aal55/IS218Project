@@ -11,7 +11,7 @@ session_start();
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="AddHW.css">
+    <link rel="stylesheet" href="css/AddHw.css">
     <script src="js/formValidation.js"></script>
     <script src="hwValidation.js"></script>
 </head>
@@ -27,7 +27,7 @@ session_start();
 <div class="container">
   <h2>Create A New Assignment</h2>
   <p id="demo"></p>
-  <form action="AddHW2.php">
+  <form action="AddHW2.php" method="post">
     <div class="form-group">
       <label for="date">Due Date:</label>
       <input type="date" class="form-control" id="date" placeholder="Enter due date">
