@@ -33,11 +33,12 @@ session_start();
 <div class="container-fluid">
     <div class="row">
         <div class="img-padding col-ms-6">
-            <div class="laptop-pic"><img src="img/laptop.jpg" width="100%" height="100%" class="rounded"
-                                         alt="Do Your Homework"></div>
-            <div class="centered text-light font-weight-bold">
-                Make Homework Easier to Manage
-                <p class="subheading text-light font-weight-normal">Organizing your assignments since 2020</p>
+            <div class="laptop-div"><img src="img/laptop.jpg" width="100%" height="100%" class="rounded laptop-pic"
+                                         alt="Do Your Homework">
+                <div class="centered text-light font-weight-bold">
+                    Make Homework Easier to Manage
+                    <p class="subheading text-light font-weight-normal">Organizing your assignments since 2020</p>
+                </div>
             </div>
         </div>
         <div class="sign-up col form-group">

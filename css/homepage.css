@@ -1,25 +1,20 @@
 body {
     padding-top: 65px;
-    overflow-y:hidden;
 }
 
 .img-padding {
     padding-right: 30px;
 }
 
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-90%, -70%);
-    font-size: 36px;
-    text-align: center;
+.laptop-div {
+    position: relative;
+    width: 788px;
+    height: 526px;
 }
 
 .laptop-pic {
     -webkit-filter: brightness(50%);
-    width: 788px;
-    height: 526px;
+    position: absolute;
 }
 
 .subheading {
@@ -41,5 +36,17 @@ body {
 }
 
 .sign-up-button {
+    text-align: center;
+    margin-bottom: -65px;
+}
+
+.centered {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
     text-align: center;
 }
