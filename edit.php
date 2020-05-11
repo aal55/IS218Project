@@ -9,14 +9,22 @@ $dbName = "pdopractice";
 try {
 	$conn = new PDO("mysql:host=$dsn;dbname=$dbName", $username, $password);
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	
-    $users = ["id" => $_POST['id'],"duedate" => $_POST['duedate'], "title" => $_POST['title'], "message" => $_POST['message']];
-	$query = 'UPDATE users SET duedate = :duedate, title = :title, message = :message, WHERE id = :id';
+
+	$id = $_SESSION['id'];
+	$duedate = $_POST['date'];
+	$title = $_POST['title'];
+	$description = $_POST['description'];
+
+	$query = 'UPDATE `todos` SET duedate = :duedate, title = :title, message = :description WHERE id = :id';
 	
 	$statement = $conn->prepare($query);
- 	$statement->execute($users);
+	$statement->bindValue(":id", $id);
+	$statement->bindValue(":duedate", $duedate);
+	$statement->bindValue(":title", $title);
+	$statement->bindValue(":description", $description);
+ 	$statement->execute();
  	$statement->closeCursor();
- 	print("Homework Assignment is Updated!");
+ 	Header("Location: dashboard.php");
 }
 
 catch(PDOException $e) {

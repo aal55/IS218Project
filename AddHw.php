@@ -20,7 +20,9 @@ session_start();
 <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
     <div class="container">
         <h1 class="text-light font-weight-bold">HWTrack</h1>
-        <button type="submit" class="button">Sign Out</button>
+        <form action="signout.php" method="post" class="form-inline">
+            <button type="submit" class="btn btn-secondary">Sign Out</button>
+        </form>
     </div>
 </nav>
 
@@ -30,18 +32,18 @@ session_start();
   <form action="AddHW2.php" method="post">
     <div class="form-group">
       <label for="date">Due Date:</label>
-      <input type="date" class="form-control" id="date" placeholder="Enter due date">
+      <input type="date" class="form-control" id="date" name="date" placeholder="Enter due date">
     </div>
     <div class="form-group">
       <label for="title">Title:</label>
-      <input type="title" class="form-control" id="title" placeholder="Enter title">
+      <input type="title" class="form-control" id="title" name="title" placeholder="Enter title">
     </div>
      <div class="form-group">
           <label for="description">Description:</label>
-          <input type="text" class="form-control" id="description" placeholder="Enter description" maxlength="144">
+          <input type="text" class="form-control" id="description" name="description" placeholder="Enter description" maxlength="144">
         </div>
         <div class="form-group">
-    <button type="submit" class="button" id="edit">Submit</button>
+    <button type="submit" class="btn btn-success" id="edit">Submit</button>
         </div>
   </form>
 </div>

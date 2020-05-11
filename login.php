@@ -26,7 +26,7 @@ try {
         $_SESSION['notFound'] = 0;
         $_SESSION['username'] = $usn;
         $_SESSION['password'] = $pwd;
-        Header("Location: test.php");
+        Header("Location: dashboard.php");
     }
     else {
         $_SESSION['notFound'] = 1;

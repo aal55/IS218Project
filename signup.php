@@ -29,7 +29,7 @@ try {
         $_SESSION['allFilled'] = 0;
         $_SESSION['username'] = $usn;
         $_SESSION['password'] = $pwd;
-        Header("Location: test.php");
+        Header("Location: dashboard.php");
     }
     else {
         $_SESSION['allFilled'] = 1;
