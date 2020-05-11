@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-$dsn="localhost";
-$username = "root";
-$password = "";
-$dbName = "pdopractice";
+$dsn="sql2.njit.edu";
+$username = "aal55";
+$password = "Something12345!";
+$dbName = "aal55";
 
 try {
  	$conn = new PDO("mysql:host=$dsn;dbname=$dbName", $username, $password);
@@ -65,15 +65,15 @@ catch(PDOException $e) {
 	  <form action="edit.php" method="post" id="edit">
 		<div class="form-group">
 			Due Date:
-			<input type="text" id="date" name="date" value="<?php echo $_SESSION['duedate']; ?>" required><br><br>
+			<input type="text" id="date" name="date" value="<?php echo $_SESSION['duedate']; ?>"><br><br>
 		</div>
 		<div class="form-group">
 			Title:
-			<input type="text" id="title" name="title" value="<?php echo $_SESSION['title']; ?>" required><br><br>
+			<input type="text" id="title" name="title" value="<?php echo $_SESSION['title']; ?>"><br><br>
 		</div>
 		<div class="form-group">
 			Description &#40Max 144 Characters&#41:
-			<input type="text" id="description" name="description" value="<?php echo $_SESSION['message']; ?>" required><br><br>
+			<input type="text" id="description" name="description" value="<?php echo $_SESSION['message']; ?>" maxlength="144"><br><br>
 		</div>
 		<div class="form-group">
 		    <button type='submit' class='btn btn-success'>Save Changes</button>

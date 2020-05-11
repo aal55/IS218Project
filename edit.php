@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-$dsn="localhost";
-$username = "root";
-$password = "";
-$dbName = "pdopractice";
+$dsn="sql2.njit.edu";
+$username = "aal55";
+$password = "Something12345!";
+$dbName = "aal55";
 
 try {
 	$conn = new PDO("mysql:host=$dsn;dbname=$dbName", $username, $password);

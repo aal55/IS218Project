@@ -32,14 +32,14 @@ session_start();
   <form action="AddHW2.php" method="post">
     <div class="form-group">
       <label for="date">Due Date:</label>
-      <input type="date" class="form-control" id="date" name="date" placeholder="Enter due date">
+      <input type="text" class="form-control" id="date" name="date" placeholder="YYYY-MM-DD HH:MI:SS">
     </div>
     <div class="form-group">
       <label for="title">Title:</label>
       <input type="title" class="form-control" id="title" name="title" placeholder="Enter title">
     </div>
      <div class="form-group">
-          <label for="description">Description:</label>
+          <label for="description">Description &#40Max 144 Characters&#41:</label>
           <input type="text" class="form-control" id="description" name="description" placeholder="Enter description" maxlength="144">
         </div>
         <div class="form-group">
